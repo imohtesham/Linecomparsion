@@ -5,12 +5,40 @@
     {
        static void Main(string[] args)
         {
-            int length1 = 10;
-            int length2 = 20;
-            int res = length1.CompareTo(length2);
-            Console.WriteLine(res);
+            Console.WriteLine("Enter start line(x1, y1) and End-point(x2 , y2) co-ordinates of line : ");
+
+            Console.Write("x1 : ");
+            int x1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("y1 : ");
+            int y1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("x2 : ");
+            int x2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("y2 : ");
+            int y2 = Convert.ToInt32(Console.ReadLine());
+
+            //length
+            double length = Math.Sqrt(x2 - x1) * (y2 - y1);
+            Console.WriteLine("Length of line have cooridnates(0,1) and (2,3) IS :(4)", x1, x2, y1, y2, length);
+
+
+            //CompareTo
+            int status = x1.CompareTo(y1);
+
+            // checking the status
+            if (status > 0)
+                Console.WriteLine("{0} is greater than {1}", x1, y1);
+
+            else if (status < 0)
+                Console.WriteLine("{0} is less than {1}", x1, y1);
+
+            else
+                Console.WriteLine("{0} is equal to {1}", x1, y1);
+            Console.ReadLine();
+
+
+
         }
-       
+
 
 
 
